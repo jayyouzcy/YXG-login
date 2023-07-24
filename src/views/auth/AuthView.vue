@@ -47,11 +47,8 @@ import router from '@/router'
 </script>
 
 <style scoped>
+@import url('@/assets/auth/style.css');
 .text-blue {
   color: rgba(18, 85, 181, 1);
-}
-
-.btn {
-  @apply min-h-[2.5rem] min-w-[17.5rem] rounded-[60px] font-yahei;
 }
 </style>
