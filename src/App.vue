@@ -1,6 +1,10 @@
 <template>
   <main>
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <Transition name="el-fade-in" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
   </main>
 </template>
 
