@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         yahei: 'Microsoft Yahei',
       },
+      colors: {
+        hyperlink: '#1255b5',
+      },
     },
   },
   plugins: [],
