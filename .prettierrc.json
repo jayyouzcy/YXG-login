@@ -12,7 +12,7 @@
   "trailingComma": "es5",
   "endOfLine": "auto",
   "arrowParens": "always",
-  "htmlWhitespaceSensitivity": "strict",
+  "htmlWhitespaceSensitivity": "css",
   "requirePragma": false,
   "insertPragma": false,
   "proseWrap": "preserve",
