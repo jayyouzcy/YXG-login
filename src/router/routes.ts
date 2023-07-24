@@ -10,7 +10,13 @@ export default <RouteRecordRaw[]>[
   {
     path: '/auth',
     name: 'auth',
-    component: () => import('../views/AuthView.vue'),
+    children: [
+      {
+        path: '',
+        name: 'auth-index',
+        component: () => import('../views/auth/AuthView.vue'),
+      },
+    ],
   },
   { path: '/:path(.*)*', name: '404', redirect: '/' },
 ]
