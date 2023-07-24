@@ -16,6 +16,11 @@ export default <RouteRecordRaw[]>[
         name: 'auth-index',
         component: () => import('../views/auth/AuthView.vue'),
       },
+      {
+        path: 'login',
+        name: 'auth-login',
+        component: () => import('../views/auth/LoginView.vue'),
+      },
     ],
   },
   { path: '/:path(.*)*', name: '404', redirect: '/' },

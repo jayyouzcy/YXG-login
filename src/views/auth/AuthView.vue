@@ -27,7 +27,9 @@
             >，其中包括<span class="text-blue">Cookie 使用条款</span>。
           </div>
 
-          <div class="ml-2 mt-8 text-2xl font-bold">已有账号？</div>
+          <div @click="router.push({ name: 'auth-login' })" class="ml-2 mt-8 cursor-pointer text-2xl font-bold">
+            已有账号？
+          </div>
 
           <button class="btn ml-2 mt-6 border-[3px] border-[#d6d6d6] bg-white text-sm">
             <div class="flex items-center justify-center">
@@ -46,7 +48,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import router from '@/router'
+</script>
 
 <style scoped>
 .text-blue {
