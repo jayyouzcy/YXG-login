@@ -7,5 +7,10 @@ export default <RouteRecordRaw[]>[
     name: 'home',
     component: HomeView,
   },
+  {
+    path: '/auth',
+    name: 'auth',
+    component: () => import('../views/AuthView.vue'),
+  },
   { path: '/:path(.*)*', name: '404', redirect: '/' },
 ]
