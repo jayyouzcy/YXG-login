@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+* {
+  font-family: 'AlibabaPuHuiTi-3-55-RegularL3';
+}
