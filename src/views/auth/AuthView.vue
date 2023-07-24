@@ -5,16 +5,13 @@
         <img
           class="min-h-screen rounded-r-[30px] object-cover"
           style="object-position: 72%"
-          src="https://img.js.design/assets/img/64a7834286c74ff11fc19978.jpg#d481b33aaf50bcbf73ef7261c2da058a"
+          src="@/assets/auth/auth_side_img.png"
         />
       </el-col>
 
       <el-col :span="12">
         <div class="mx-auto mt-8 w-[19rem]">
-          <img
-            class="h-16 w-48 object-cover"
-            src="https://img.js.design/assets/img/644f9628fc033626d573c910.png#943efe8ec8757b71b64d87605dc08e8b"
-          />
+          <img class="h-16 w-48 object-cover" src="@/assets/common/GYX_gov.png" />
 
           <div class="ml-2 mt-10 text-3xl font-bold">为了明天的一切，</div>
           <div class="ml-[4.5rem] text-3xl font-bold">为了一切的明天</div>
@@ -33,10 +30,7 @@
 
           <button class="btn ml-2 mt-6 border-[3px] border-[#d6d6d6] bg-white text-sm">
             <div class="flex items-center justify-center">
-              <img
-                class="mr-1 h-9 w-16"
-                src="https://img.js.design/assets/img/6428e9459f2335ce709c37a7.png#69ad1abc4e882f2fdf01b90d5c3a4c8b"
-              />
+              <img class="mr-1 h-9 w-16" src="@/assets/common/GYX_community.png" />
               <div class="font-yahei font-bold">通过 Y X 社区登录</div>
             </div>
           </button>
