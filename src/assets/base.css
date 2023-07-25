@@ -5,3 +5,8 @@
 * {
   font-family: 'AlibabaPuHuiTi-3-55-RegularL3';
 }
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
