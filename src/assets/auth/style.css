@@ -33,9 +33,19 @@
   position: absolute;
   bottom: 25%;
   left: 0;
-  color: grey;
+  color: gray;
   pointer-events: none;
   transition: all 0.1s ease;
   margin-left: 0.5rem;
   font-size: 0.9rem;
+}
+
+.animated-input input:disabled ~ label {
+  transform: translateY(-14px);
+  font-size: 0.5rem;
+  color: gray;
+}
+
+.animated-input input:disabled {
+  color: gray;
 }
