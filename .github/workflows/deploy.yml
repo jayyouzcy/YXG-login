@@ -24,18 +24,12 @@ jobs:
 
       - name: Install Node.js
         uses: actions/setup-node@v2
-        with:
-          version: 16
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Vite build
         run: npm run build-only
-
-      - name: Stop Vite server
-        run: |
-          kill $(lsof -t -i:5173)  # 停止端口为 5173 的进程
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
