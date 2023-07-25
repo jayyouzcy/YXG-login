@@ -45,4 +45,5 @@ export default defineConfig({
       },
     },
   },
+  publicDir: process.env.NODE_ENV === 'production' ? '/YXG-login/' : '/',
 })
