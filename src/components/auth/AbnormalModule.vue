@@ -2,8 +2,8 @@
   <div>
     <i-ep-close-bold @click="$router.push({ name: 'auth-index' })" class="ml-4 mt-4 cursor-pointer text-2xl" />
     <div class="text-center">
-      <img class="mx-auto mt-1 h-12 w-40 object-cover" src="@/assets/common/GYX_gov.png" />
-      <div class="mt-4 text-2xl font-bold">输入你的手机号码或YXG ID</div>
+      <img class="mx-auto -mt-6 h-24 object-cover" src="@/assets/common/YX_gov.png" />
+      <div class="text-2xl font-bold">输入你的手机号码或YXG ID</div>
       <div class="mx-[12%] mt-1 text-sm">
         你的账户存在异常登录活动。为了保证你的账户安全，请输入你的手机号码或YXG ID以确认你的身份。
       </div>

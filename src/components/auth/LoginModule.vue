@@ -2,11 +2,11 @@
   <div>
     <i-ep-close-bold @click="$router.push({ name: 'auth-index' })" class="ml-4 mt-4 cursor-pointer text-2xl" />
     <div class="text-center">
-      <img class="mx-auto mt-1 h-12 w-40 object-cover" src="@/assets/common/GYX_gov.png" />
-      <div class="mt-4 text-3xl font-bold">登录到YXG</div>
+      <img class="mx-auto -mt-6 h-24 object-cover" src="@/assets/common/YX_gov.png" />
+      <div class="text-3xl font-bold">登录到YXG</div>
       <button class="btn mt-6 border-[3px] border-[#d6d6d6] bg-white text-sm">
         <div class="flex items-center justify-center">
-          <img class="mr-1 h-9 w-16" src="@/assets/common/GYX_community.png" />
+          <img class="mr-1 h-7" src="@/assets/common/YX_community.png" />
           <div class="font-yahei font-bold">通过 Y X 社区登录</div>
         </div>
       </button>
