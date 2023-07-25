@@ -27,6 +27,11 @@ export default <RouteRecordRaw[]>[
         name: 'auth-register',
         component: () => import('../components/auth/RegisterModule.vue'),
       },
+      {
+        path: 'abnormal',
+        name: 'auth-abnormal',
+        component: () => import('../components/auth/AbnormalModule.vue'),
+      },
     ],
   },
   { path: '/:path(.*)*', name: '404', redirect: '/' },

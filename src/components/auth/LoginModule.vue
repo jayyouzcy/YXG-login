@@ -15,7 +15,12 @@
         <input v-model="identification" type="text" required />
         <label>手机号码、邮箱地址或YXG ID</label>
       </div>
-      <button class="btn ml-2 mt-8 bg-blue-700 text-base font-bold text-white">下一步</button>
+      <button
+        @click="$router.push({ name: 'auth-abnormal' })"
+        class="btn ml-2 mt-8 bg-blue-700 text-base font-bold text-white"
+      >
+        下一步
+      </button>
       <button class="btn ml-2 mt-2 border-[3px] border-[#d6d6d6] bg-white font-bold">忘记密码？</button>
       <div class="mt-8">
         还没有账号？<span @click="$router.push({ name: 'auth-register' })" class="hyperlink">注册</span>
