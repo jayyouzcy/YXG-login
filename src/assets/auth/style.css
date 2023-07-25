@@ -17,12 +17,18 @@
 .animated-input input {
   @apply h-full w-full rounded-[10px] border-[3px] border-[#d6d6d6] pl-2 pt-4 font-yahei;
 }
+
+.animated-input input:focus {
+  @apply outline-hyperlink;
+}
+
 .animated-input input:focus ~ label,
 .animated-input input:valid ~ label {
   transform: translateY(-14px);
   font-size: 0.5rem;
   color: #4158d0;
 }
+
 .animated-input label {
   position: absolute;
   bottom: 25%;
