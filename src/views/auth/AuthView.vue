@@ -24,9 +24,7 @@
             >，其中包括<span class="hyperlink">Cookie 使用条款</span>。
           </div>
 
-          <div @click="router.push({ name: 'auth-login' })" class="ml-2 mt-8 cursor-pointer text-2xl font-bold">
-            已有账号？
-          </div>
+          <div class="ml-2 mt-8 text-2xl font-bold">已有账号？</div>
 
           <button class="btn ml-2 mt-6 border-[3px] border-[#d6d6d6] bg-white text-sm">
             <div class="flex items-center justify-center">
@@ -35,7 +33,12 @@
             </div>
           </button>
           <div class="ml-[8.5rem] mt-2 font-bold">或</div>
-          <button class="btn ml-2 mt-2 border-[3px] border-[#d6d6d6] bg-white font-bold text-blue-700">登录</button>
+          <button
+            @click="router.push({ name: 'auth-login' })"
+            class="btn ml-2 mt-2 border-[3px] border-[#d6d6d6] bg-white font-bold text-blue-700"
+          >
+            登录
+          </button>
         </div>
       </el-col>
     </el-row>
