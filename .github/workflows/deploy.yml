@@ -15,8 +15,6 @@ jobs:
 
       - name: Install Node.js
         uses: actions/setup-node@v2
-        with:
-          node-version: 14 # 修改为你需要的 Node.js 版本
 
       - name: Install dependencies
         run: npm install
@@ -28,7 +26,7 @@ jobs:
         run: sleep 30 # 可能需要适当调整等待时间
 
       - name: Run Vite build
-        run: npm run build
+        run: npm run build-only
 
       - name: Stop Vite server
         run: |
