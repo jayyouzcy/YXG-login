@@ -1,5 +1,5 @@
 <template>
-  <i-ep-close-bold @click="router.push({ name: 'auth-index' })" class="ml-4 mt-4 cursor-pointer text-2xl" />
+  <i-ep-close-bold @click="$router.push({ name: 'auth-index' })" class="ml-4 mt-4 cursor-pointer text-2xl" />
   <div class="text-center">
     <img class="mx-auto mt-1 h-12 w-40 object-cover" src="@/assets/common/GYX_gov.png" />
     <div class="mt-4 cursor-pointer text-3xl font-bold">登录到YXG</div>
@@ -17,14 +17,12 @@
     <button class="btn ml-2 mt-8 bg-blue-700 text-base font-bold text-white">下一步</button>
     <button class="btn ml-2 mt-2 border-[3px] border-[#d6d6d6] bg-white font-bold">忘记密码？</button>
     <div class="mt-8">
-      还没有账号？<span @click="router.push({ name: 'auth-register' })" class="hyperlink">注册</span>
+      还没有账号？<span @click="$router.push({ name: 'auth-register' })" class="hyperlink">注册</span>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import router from '@/router'
-
 const identification = ref('')
 </script>
 

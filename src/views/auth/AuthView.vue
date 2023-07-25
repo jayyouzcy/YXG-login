@@ -19,12 +19,12 @@
           <div class="ml-3 mt-10 text-4xl font-bold">立即加入YXG。</div>
 
           <button
-            @click="router.push({ name: 'auth-register' })"
+            @click="$router.push({ name: 'auth-register' })"
             class="btn ml-2 mt-12 bg-blue-700 text-base font-bold text-white"
           >
             创建账号
           </button>
-          <div class="ml-2 mt-1 text-[0.1rem] text-[#383838]">
+          <div class="ml-2 mt-1 text-xs text-[#383838]">
             注册即表示同意<span class="hyperlink">服务条款</span>及<span class="hyperlink">隐私政策</span
             >，其中包括<span class="hyperlink">Cookie 使用条款</span>。
           </div>
@@ -39,7 +39,7 @@
           </button>
           <div class="ml-[8.5rem] mt-2 font-bold">或</div>
           <button
-            @click="router.push({ name: 'auth-login' })"
+            @click="$router.push({ name: 'auth-login' })"
             class="btn ml-2 mt-2 border-[3px] border-[#d6d6d6] bg-white font-bold text-blue-700"
           >
             登录
@@ -50,9 +50,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import router from '@/router'
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 @import url('@/assets/auth/style.css');
