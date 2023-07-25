@@ -9,7 +9,11 @@
       </RouterView>
     </div>
   </div>
-  <RouterView v-else />
+  <RouterView v-else v-slot="{ Component }">
+    <Transition name="el-fade-in" mode="out-in">
+      <component :is="Component" />
+    </Transition>
+  </RouterView>
 </template>
 
 <script setup lang="ts"></script>
