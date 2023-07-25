@@ -8,15 +8,10 @@
         你的账户存在异常登录活动。为了保证你的账户安全，请输入你的手机号码或YXG ID以确认你的身份。
       </div>
       <div class="animated-input mx-auto mt-4">
-        <input v-model="verification" type="text" required />
+        <input v-model="identification" type="text" required disabled />
         <label>手机号码或YXG ID</label>
       </div>
-      <button
-        @click="$router.push({ name: 'auth-password', query: { identification } })"
-        class="btn ml-2 mt-56 bg-blue-700 text-base font-bold text-white"
-      >
-        下一步
-      </button>
+      <button class="btn ml-2 mt-56 bg-blue-700 text-base font-bold text-white">下一步</button>
     </div>
   </div>
 </template>
@@ -26,7 +21,6 @@ import router from '@/router'
 
 const identification = router.currentRoute.value.query.identification
 console.log(identification)
-const verification = ref('')
 </script>
 
 <style scoped>

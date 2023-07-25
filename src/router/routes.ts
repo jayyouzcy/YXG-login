@@ -33,6 +33,12 @@ export default <RouteRecordRaw[]>[
         props: true,
         component: () => import('../components/auth/AbnormalModule.vue'),
       },
+      {
+        path: 'password',
+        name: 'auth-password',
+        props: true,
+        component: () => import('../components/auth/PasswordModule.vue'),
+      },
     ],
   },
   { path: '/:path(.*)*', name: '404', redirect: '/' },
