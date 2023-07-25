@@ -19,16 +19,16 @@ jobs:
           node-version: 14 # 修改为你需要的 Node.js 版本
 
       - name: Install dependencies
-        run: yarn
+        run: npm install
 
       - name: Start Vite server
-        run: yarn dev & # 后台运行 Vite 服务器
+        run: npm run dev & # 后台运行 Vite 服务器
 
       - name: Wait for Vite server to start
         run: sleep 30 # 可能需要适当调整等待时间
 
       - name: Run Vite build
-        run: yarn build
+        run: npm run build
 
       - name: Stop Vite server
         run: |
