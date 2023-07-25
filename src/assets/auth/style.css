@@ -1,3 +1,38 @@
+/* ------------------------------- (身份验证页)通用按钮 ------------------------------ */
 .btn {
   @apply min-h-[2.5rem] min-w-[17.5rem] rounded-[60px] font-yahei;
+}
+
+/* ------------------------------- (身份验证页)通用容器 ------------------------------ */
+.auth-container {
+  border-radius: 24px;
+  background-color: white;
+  box-shadow: 0px 9px 23px rgba(0, 0, 0, 0.25);
+  @apply mx-auto h-[34rem] w-[28rem];
+}
+
+/* ------------------------------ (身份验证页)通用输入框 ------------------------------ */
+.animated-input {
+  position: relative;
+  @apply h-[3rem] w-[17.5rem];
+}
+
+.animated-input input {
+  @apply h-full w-full rounded-[10px] border-[3px] border-[#d6d6d6] pl-2 pt-4 font-yahei;
+}
+.animated-input input:focus ~ label,
+.animated-input input:valid ~ label {
+  transform: translateY(-14px);
+  font-size: 0.5rem;
+  color: #4158d0;
+}
+.animated-input label {
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  transition: all 0.1s ease;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
 }
