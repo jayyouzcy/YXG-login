@@ -1,19 +1,19 @@
 <template>
-  <!-- 除了 auth-index 外的所有模块的共同背景 -->
-  <div v-if="$router.currentRoute.value.name !== 'auth-index'" class="bg">
-    <div class="auth-container">
-      <RouterView v-slot="{ Component }">
-        <Transition name="el-fade-in" mode="out-in">
-          <component :is="Component" />
-        </Transition>
-      </RouterView>
+  <Transition name="el-fade-in" mode="out-in">
+    <!-- 除了 auth-index 外的所有模块的共同背景 -->
+    <div v-if="$router.currentRoute.value.name !== 'auth-index'" class="bg">
+      <div class="auth-container">
+        <RouterView v-slot="{ Component }">
+          <Transition name="el-fade-in" mode="out-in">
+            <component :is="Component" />
+          </Transition>
+        </RouterView>
+      </div>
     </div>
-  </div>
-  <RouterView v-else v-slot="{ Component }">
-    <Transition name="el-fade-in" mode="out-in">
-      <component :is="Component" />
-    </Transition>
-  </RouterView>
+    <div v-else>
+      <RouterView />
+    </div>
+  </Transition>
 </template>
 
 <script setup lang="ts"></script>
