@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@master # 步骤的运行说明
       - uses: actions/setup-node@master # 设置 NodeJS 环境
+      - uses: pnpm/action-setup@v2.2.4 # 设置 pnpm 包管理器
       - name: build
         run: |
           pnpm install
