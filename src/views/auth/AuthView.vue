@@ -20,8 +20,8 @@
 
           <button class="btn ml-2 mt-12 bg-blue-700 text-base font-bold text-white">创建账号</button>
           <div class="ml-2 mt-1 text-[0.1rem] text-[#383838]">
-            注册即表示同意<span class="text-hyperlink">服务条款</span>及<span class="text-hyperlink">隐私政策</span
-            >，其中包括<span class="text-hyperlink">Cookie 使用条款</span>。
+            注册即表示同意<span class="hyperlink">服务条款</span>及<span class="hyperlink">隐私政策</span
+            >，其中包括<span class="hyperlink">Cookie 使用条款</span>。
           </div>
 
           <div @click="router.push({ name: 'auth-login' })" class="ml-2 mt-8 cursor-pointer text-2xl font-bold">
