@@ -16,7 +16,7 @@
         <label>手机号码、邮箱地址或YXG ID</label>
       </div>
       <button
-        @click="$router.push({ name: 'auth-abnormal' })"
+        @click="$router.push({ name: 'auth-abnormal', query: { identification } })"
         class="btn ml-2 mt-8 bg-blue-700 text-base font-bold text-white"
       >
         下一步

@@ -30,6 +30,7 @@ export default <RouteRecordRaw[]>[
       {
         path: 'abnormal',
         name: 'auth-abnormal',
+        props: true,
         component: () => import('../components/auth/AbnormalModule.vue'),
       },
     ],

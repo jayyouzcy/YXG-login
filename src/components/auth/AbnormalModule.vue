@@ -5,7 +5,7 @@
       <img class="mx-auto mt-1 h-12 w-40 object-cover" src="@/assets/common/GYX_gov.png" />
       <div class="mt-4 text-3xl font-bold">登录到YXG</div>
       <div class="animated-input mx-auto mt-4">
-        <input v-model="identification" type="text" required />
+        <input v-model="verification" type="text" required />
         <label>手机号码、邮箱地址或YXG ID</label>
       </div>
       <button class="btn ml-2 mt-8 bg-blue-700 text-base font-bold text-white">下一步</button>
@@ -14,7 +14,10 @@
 </template>
 
 <script setup lang="ts">
-const identification = ref('')
+import router from '@/router'
+
+const identification = router.currentRoute.value.query.identification
+const verification = ref('')
 </script>
 
 <style scoped>
