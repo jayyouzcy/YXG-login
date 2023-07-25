@@ -9,21 +9,26 @@ jobs:
   build:
     runs-on: ubuntu-latest # 环境镜像
 
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    concurrency:
+      group: 'pages'
+      cancel-in-progress: false
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Install Node.js
         uses: actions/setup-node@v2
+        with:
+          version: 16
 
       - name: Install dependencies
         run: npm install
-
-      - name: Start Vite server
-        run: npm run dev & # 后台运行 Vite 服务器
-
-      - name: Wait for Vite server to start
-        run: sleep 30 # 可能需要适当调整等待时间
 
       - name: Run Vite build
         run: npm run build-only
