@@ -10,6 +10,7 @@ export default <RouteRecordRaw[]>[
   {
     path: '/auth',
     name: 'auth',
+    component: () => import('../views/auth/CommonLayoutView.vue'),
     children: [
       {
         path: '',
@@ -19,12 +20,12 @@ export default <RouteRecordRaw[]>[
       {
         path: 'login',
         name: 'auth-login',
-        component: () => import('../views/auth/LoginView.vue'),
+        component: () => import('../components/auth/LoginModule.vue'),
       },
       {
         path: 'register',
         name: 'auth-register',
-        component: () => import('../views/auth/RegisterView.vue'),
+        component: () => import('../components/auth/RegisterModule.vue'),
       },
     ],
   },
