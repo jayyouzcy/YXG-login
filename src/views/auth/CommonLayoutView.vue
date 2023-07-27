@@ -1,7 +1,12 @@
 <template>
   <Transition name="el-fade-in" mode="out-in">
     <!-- 除了 auth-index 外的所有模块的共同背景 -->
-    <div v-if="$router.currentRoute.value.name !== 'auth-index'" class="bg">
+    <div
+      v-if="
+        $router.currentRoute.value.name !== 'auth-index' && $router.currentRoute.value.name !== 'auth-createSuccess'
+      "
+      class="bg"
+    >
       <div class="auth-container">
         <i-ep-close-bold @click="$router.push({ name: 'auth-index' })" class="ml-4 mt-4 cursor-pointer text-2xl" />
         <div class="text-center">
@@ -23,16 +28,5 @@
 <script setup lang="ts"></script>
 
 <style scoped>
-.bg {
-  background-image: url('@/assets/auth/login_bg.jpg');
-  background-size: cover;
-  @apply flex h-screen items-center;
-}
-
-.auth-container {
-  border-radius: 24px;
-  background-color: white;
-  box-shadow: 0px 9px 23px rgba(0, 0, 0, 0.25);
-  @apply mx-auto h-[34rem] w-[28rem];
-}
+@import '@/assets/auth/style.css';
 </style>

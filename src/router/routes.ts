@@ -33,6 +33,11 @@ export default <RouteRecordRaw[]>[
         component: () => import('../components/auth/CreateAccountModule.vue'),
       },
       {
+        path: 'create-success',
+        name: 'auth-createSuccess',
+        component: () => import('../views/auth/CreateSuccessView.vue'),
+      },
+      {
         path: 'abnormal',
         name: 'auth-abnormal',
         props: true,

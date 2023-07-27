@@ -1,3 +1,16 @@
+.bg {
+  background-image: url('@/assets/auth/login_bg.jpg');
+  background-size: cover;
+  @apply flex h-screen items-center;
+}
+
+.auth-container {
+  border-radius: 24px;
+  background-color: white;
+  box-shadow: 0px 9px 23px rgba(0, 0, 0, 0.25);
+  @apply mx-auto h-[34rem] w-[28rem];
+}
+
 /* ---------------------------------- 通用按钮 ---------------------------------- */
 .btn {
   @apply min-h-[2.5rem] min-w-[17.5rem] rounded-[60px] font-yahei;

@@ -3,7 +3,7 @@
     <div class="text-3xl font-bold">
       {{ (currentStep === 4 ? (form.contact.includes('@') ? '邮箱' : '手机号码') : '') + stepTitles[currentStep - 1] }}
     </div>
-    <div v-if="currentStep !== 6" class="mt-4 text-2xl font-semibold tracking-widest">第{{ currentStep }}步，共5步</div>
+    <div class="mt-4 text-2xl font-semibold tracking-widest">第{{ currentStep }}步，共5步</div>
 
     <!-- 步骤 1 -->
     <div v-if="currentStep === 1">
@@ -110,10 +110,13 @@
           >Cookie 使用条款</span
         >。
       </div>
-      <button @click="currentStep++" class="btn ml-2 mt-2 bg-blue-700 text-base font-bold text-white">注册</button>
+      <button
+        @click="$router.push({ name: 'auth-createSuccess' })"
+        class="btn ml-2 mt-2 bg-blue-700 text-base font-bold text-white"
+      >
+        注册
+      </button>
     </div>
-
-    <!-- TODO: 步骤 6 Success -->
   </div>
 </template>
 
