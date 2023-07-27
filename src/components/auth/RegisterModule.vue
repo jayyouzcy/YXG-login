@@ -9,7 +9,7 @@
     </button>
     <div class="mt-4 text-xl font-bold">或</div>
     <button
-      @click="$router.push({ name: 'auth-register' })"
+      @click="$router.push({ name: 'auth-createAccount' })"
       class="btn ml-2 mt-4 bg-blue-700 text-base font-bold text-white"
     >
       创建账号

@@ -28,6 +28,11 @@ export default <RouteRecordRaw[]>[
         component: () => import('../components/auth/RegisterModule.vue'),
       },
       {
+        path: 'create-account',
+        name: 'auth-createAccount',
+        component: () => import('../components/auth/CreateAccountModule.vue'),
+      },
+      {
         path: 'abnormal',
         name: 'auth-abnormal',
         props: true,
