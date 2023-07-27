@@ -37,13 +37,33 @@
       <button @click="currentStep++" class="btn ml-2 mt-40 bg-blue-700 text-base font-bold text-white">下一步</button>
     </div>
 
-    <!-- TODO: 步骤 3 -->
+    <!-- 步骤 3 -->
+    <div v-if="currentStep === 3">
+      <div class="animated-input mx-auto mt-4">
+        <input v-model="form.name" type="text" required disabled />
+        <label>姓名</label>
+      </div>
+      <div class="animated-input mx-auto mt-4">
+        <input v-model="form.contact" type="text" required disabled />
+        <label>{{ form.contact.includes('@') ? '邮箱地址' : '手机号码' }}</label>
+      </div>
+
+      <div class="mx-[16%] mt-24 text-left text-xs text-[#383838]">
+        注册即表示同意<span class="hyperlink">服务条款</span>及<span class="hyperlink">隐私政策</span>，其中包括<span
+          class="hyperlink"
+          >Cookie 使用条款</span
+        >。
+      </div>
+      <button @click="currentStep++" class="btn ml-2 mt-3 bg-blue-700 text-base font-bold text-white">注册</button>
+    </div>
+
+    <!-- TODO: 步骤 4 -->
   </div>
 </template>
 
 <script setup lang="ts">
 const currentStep = ref(1)
-const stepTitles = ['创建你的YXG账户', '定制你的体验']
+const stepTitles = ['创建你的YXG账户', '定制你的体验', '创建你的YXG账户']
 
 const form = reactive({
   name: '',
