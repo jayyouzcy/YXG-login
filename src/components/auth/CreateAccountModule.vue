@@ -3,7 +3,7 @@
     <div class="text-3xl font-bold">
       {{ (currentStep === 4 ? (form.contact.includes('@') ? '邮箱' : '手机号码') : '') + stepTitles[currentStep - 1] }}
     </div>
-    <div class="mt-4 text-2xl font-semibold tracking-widest">第{{ currentStep }}步，共5步</div>
+    <div v-if="currentStep !== 6" class="mt-4 text-2xl font-semibold tracking-widest">第{{ currentStep }}步，共5步</div>
 
     <!-- 步骤 1 -->
     <div v-if="currentStep === 1">
@@ -85,18 +85,48 @@
       <button @click="currentStep++" class="btn ml-2 mt-24 bg-blue-700 text-base font-bold text-white">下一步</button>
     </div>
 
-    <!-- TODO: 步骤 5 -->
+    <!-- 步骤 5 -->
+    <div v-if="currentStep === 5">
+      <div class="animated-input mx-auto mt-2">
+        <input v-model="form.name" type="text" required disabled />
+        <label>姓名</label>
+      </div>
+      <div class="animated-input mx-auto mt-2">
+        <input v-model="form.contact" type="text" required disabled />
+        <label>{{ form.contact.includes('@') ? '邮箱地址' : '手机号码' }}</label>
+      </div>
+      <div class="animated-input mx-auto mt-2">
+        <input v-model="form.password" type="password" required />
+        <label>密码</label>
+      </div>
+      <div class="animated-input mx-auto mt-2">
+        <input v-model="form.passwordAgain" type="password" required />
+        <label>确认密码</label>
+      </div>
+
+      <div class="mx-[16%] mt-4 text-left text-xs text-[#383838]">
+        注册即表示同意<span class="hyperlink">服务条款</span>及<span class="hyperlink">隐私政策</span>，其中包括<span
+          class="hyperlink"
+          >Cookie 使用条款</span
+        >。
+      </div>
+      <button @click="currentStep++" class="btn ml-2 mt-2 bg-blue-700 text-base font-bold text-white">注册</button>
+    </div>
+
+    <!-- TODO: 步骤 6 Success -->
   </div>
 </template>
 
 <script setup lang="ts">
 const currentStep = ref(1)
-const stepTitles = ['创建你的YXG账户', '定制你的体验', '创建你的YXG账户', '验证']
+const stepTitles = ['创建你的YXG账户', '定制你的体验', '创建你的YXG账户', '验证', '创建你的YXG账户']
 
 const form = reactive({
   name: '',
   contact: '',
   collectData: true,
+  password: '',
+  passwordAgain: '',
 })
 
 const verificationCode = ref()
