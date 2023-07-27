@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="text-3xl font-bold">{{ stepTitles[currentStep - 1] }}</div>
+    <div class="text-3xl font-bold">
+      {{ (currentStep === 4 ? (form.contact.includes('@') ? '邮箱' : '手机号码') : '') + stepTitles[currentStep - 1] }}
+    </div>
     <div class="mt-4 text-2xl font-semibold tracking-widest">第{{ currentStep }}步，共5步</div>
 
     <!-- 步骤 1 -->
@@ -57,21 +59,63 @@
       <button @click="currentStep++" class="btn ml-2 mt-3 bg-blue-700 text-base font-bold text-white">注册</button>
     </div>
 
-    <!-- TODO: 步骤 4 -->
+    <!-- TODO: 步骤 4 需要完善邮箱转手机验证 -->
+    <div v-if="currentStep === 4">
+      <div class="mt-4 text-2xl font-semibold">我们向你发送了一个代码</div>
+      <div class="mt-1">在下面输入验证{{ form.contact }}。</div>
+      <div class="animated-input mx-auto mt-4">
+        <input v-model="verificationCode" type="text" required />
+        <label>验证码</label>
+      </div>
+      <div class="hyperlink ml-[5.4rem] mt-1 text-left text-xs">
+        <span v-if="form.contact.includes('@')" @click="popConfirmOpen = !popConfirmOpen">没有收到邮件？ </span>
+        <span v-else @click="null">重新获取验证码</span>
+        <div
+          v-if="popConfirmOpen"
+          class="absolute left-0 top-0 h-screen w-screen cursor-default"
+          @click="popConfirmOpen = !popConfirmOpen"
+        />
+        <div v-if="popConfirmOpen" class="pop-confirm cursor-default text-black">
+          <div class="ml-3 mt-2">没有收到邮件？</div>
+          <div @click="null" class="ml-4 mt-3 cursor-pointer font-bold">重新发送邮件</div>
+          <div @click="null" class="ml-4 mt-1 cursor-pointer font-bold">改用手机号码</div>
+        </div>
+      </div>
+
+      <button @click="currentStep++" class="btn ml-2 mt-24 bg-blue-700 text-base font-bold text-white">下一步</button>
+    </div>
+
+    <!-- TODO: 步骤 5 -->
   </div>
 </template>
 
 <script setup lang="ts">
 const currentStep = ref(1)
-const stepTitles = ['创建你的YXG账户', '定制你的体验', '创建你的YXG账户']
+const stepTitles = ['创建你的YXG账户', '定制你的体验', '创建你的YXG账户', '验证']
 
 const form = reactive({
   name: '',
   contact: '',
   collectData: true,
 })
+
+const verificationCode = ref()
+
+const popConfirmOpen = ref(false)
 </script>
 
 <style scoped>
 @import '@/assets/auth/style.css';
+
+.pop-confirm {
+  position: absolute;
+  left: 605px;
+  top: 470px;
+  width: 6.5rem;
+  height: 5rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(229, 229, 229, 1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
 </style>
